@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7c3f32">
+<meta name="description" content="AMNI Creations — handmade bookmarks, custom greeting cards, keychains and creative design services.">
+<title>AMNI Creations | Handmade • Custom • Creative</title>
+<style>
+:root{
+  --bg:#fffaf4;--paper:#fffdf9;--ink:#241b1b;--muted:#756761;
+  --brand:#7c3f32;--brand2:#a95f4f;--gold:#c9984b;--line:#eadfd4;
+  --dark:#241c1b;--soft:#f3e2cd;--shadow:0 18px 50px rgba(70,40,25,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(234,223,212,.9)}
+.navin{max-width:1100px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:950;letter-spacing:2px;color:var(--brand);font-size:1.05rem;white-space:nowrap}
+.navlinks{display:flex;gap:4px;overflow:auto}
+.navlinks a{text-decoration:none;padding:8px 10px;border-radius:999px;font-size:.86rem;font-weight:700;white-space:nowrap}
+.navlinks a:hover{background:#f4e9df}
+.hero{position:relative;overflow:hidden;min-height:calc(100vh - 66px);display:grid;place-items:center;text-align:center;padding:70px 18px;background:
+ radial-gradient(circle at 8% 18%,#f3d5a7 0 7%,transparent 7.5%),
+ radial-gradient(circle at 92% 75%,#e7c1b5 0 9%,transparent 9.5%),
+ linear-gradient(135deg,#fffaf4,#f8ead9)}
+.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(124,63,50,.13);border-radius:50%;right:-100px;top:-90px}
+.hero-box{position:relative;z-index:1;width:min(760px,100%)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff4df;border:1px solid #ecd4ad;color:#70412e;padding:7px 13px;border-radius:999px;font-size:.76rem;font-weight:850;letter-spacing:.7px}
+h1{font-size:clamp(3.8rem,17vw,7.2rem);line-height:.84;letter-spacing:-5px;color:var(--brand);margin:22px 0 0}
+.hero h1 span{color:var(--ink)}
+.hero p{font-size:clamp(1rem,2.5vw,1.18rem);color:var(--muted);max-width:650px;margin:25px auto}
+.actions{display:flex;flex-direction:column;gap:11px;align-items:center}
+.btn{display:inline-flex;justify-content:center;align-items:center;min-height:50px;width:min(360px,100%);padding:13px 20px;border-radius:999px;background:var(--brand);color:white;text-decoration:none;font-weight:850;box-shadow:0 10px 24px rgba(124,63,50,.18);transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#683126}
+.btn.alt{background:rgba(255,255,255,.8);color:var(--brand);border:1px solid #d9bdb4;box-shadow:none}
+.btn.gold{background:var(--gold);color:#2e2117}
+section{padding:72px 18px}
+.wrap{max-width:1050px;margin:auto}
+.section-head{text-align:center;max-width:700px;margin:0 auto 35px}
+.eyebrow{color:var(--brand);font-weight:900;letter-spacing:1.8px;text-transform:uppercase;font-size:.74rem}
+.section-title{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:8px 0 10px}
+.sub{color:var(--muted);margin:0;font-size:1rem}
+.grid{display:grid;grid-template-columns:1fr;gap:17px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:var(--shadow);transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.icon{width:58px;height:58px;display:grid;place-items:center;border-radius:17px;background:#f7eadc;font-size:1.8rem}
+.card h3{margin:15px 0 6px;font-size:1.2rem}.card p{color:var(--muted);margin:0}
+.about{background:var(--dark);color:#fff8ef}
+.about .section-head{text-align:left;margin:0}
+.about .sub{color:#d9cbc5}
+.about-grid{display:grid;gap:35px;align-items:center}
+.quote{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.15;font-weight:800;border-left:3px solid var(--gold);padding-left:20px}
+.creator{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap}
+.pill{border:1px solid #594846;border-radius:999px;padding:8px 12px;color:#eee1da;font-size:.9rem}
+.order{background:linear-gradient(135deg,#f3e2cd,#fff5e8)}
+.steps{display:grid;gap:16px;max-width:760px;margin:0 auto 30px}
+.step{display:flex;gap:15px;align-items:flex-start;background:rgba(255,255,255,.65);border:1px solid #e8d4bd;padding:17px;border-radius:18px}
+.num{min-width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:900}
+.contact{background:#fff}
+.contact-box{background:var(--paper);border:1px solid var(--line);border-radius:25px;padding:28px;box-shadow:var(--shadow);text-align:center}
+.contact-actions{display:grid;gap:11px;margin-top:20px}
+.contact-link{text-decoration:none;border:1px solid var(--line);border-radius:15px;padding:13px;background:#fff;font-weight:800}
+footer{padding:28px 18px;text-align:center;background:#1b1515;color:#cfc1ba;font-size:.88rem}
+footer strong{color:#fff3ea}
+.small{font-size:.78rem;color:#95857e;margin-top:8px}
+@media(min-width:650px){
+ .actions{flex-direction:row;justify-content:center}.btn{width:auto;min-width:210px}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .contact-actions{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:850px){
+ section{padding:95px 24px}.grid{grid-template-columns:repeat(4,1fr)}
+ .about-grid{grid-template-columns:1.1fr .9fr}
+ .steps{grid-template-columns:repeat(3,1fr);max-width:1050px}
+ .step{display:block}.num{margin-bottom:12px}
+}
+@media(max-width:520px){.navin{display:block;text-align:center}.navlinks{justify-content:center}.logo{margin-bottom:5px}h1{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="navin">
+    <div class="logo">AMNI CREATIONS</div>
+    <div class="navlinks">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-box">
+    <span class="badge">✦ HANDMADE • CUSTOM • CREATIVE ✦</span>
+    <h1>AMNI<br><span>Creations</span></h1>
+    <p>Small handmade creations made with big imagination — thoughtful gifts, personalized designs, and creative pieces made just for you.</p>
+    <div class="actions">
+      <a class="btn" href="#products">Explore Our Work</a>
+      <a class="btn alt" href="#order">Place an Order</a>
+    </div>
+  </div>
+</header>
+
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we make</div>
+      <h2 class="section-title">Made to be remembered.</h2>
+      <p class="sub">Creative handmade products for gifts, friends, celebrations and special moments.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">🔖</div><h3>Handmade Bookmarks</h3><p>Creative, colorful bookmarks made for readers and gift lovers.</p></article>
+      <article class="card"><div class="icon">💌</div><h3>Custom Greeting Cards</h3><p>Personalized cards for birthdays, celebrations and surprises.</p></article>
+      <article class="card"><div class="icon">🔑</div><h3>Handmade Keychains</h3><p>Fun handmade pieces for your keys, bag or gifts.</p></article>
+      <article class="card"><div class="icon">🎨</div><h3>Drawing &amp; Design</h3><p>Custom drawings and creative designs made to your idea.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">Our story</div>
+      <h2 class="section-title">Made by two creators.</h2>
+      <p class="sub">AMNI Creations is a small creative business by Amarjit Malakar and Nishant Oraon.</p>
+      <p>We are starting small, learning as we go, and turning simple materials and ideas into things people can enjoy, keep and gift.</p>
+      <div class="creator">
+        <span class="pill">Amarjit Malakar</span>
+        <span class="pill">Nishant Oraon</span>
+      </div>
+    </div>
+    <div class="quote">“Your idea. Our creativity. Something handmade.”</div>
+  </div>
+</section>
+
+<section id="order" class="order">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Simple ordering</div>
+      <h2 class="section-title">How to order</h2>
+      <p class="sub">Tell us what you want and we'll discuss the details with you.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><b>Choose</b><br>Pick a product or request a custom design.</div></div>
+      <div class="step"><div class="num">2</div><div><b>Customize</b><br>Share your colors, name, message or idea.</div></div>
+      <div class="step"><div class="num">3</div><div><b>Confirm</b><br>Discuss the price and delivery or pickup.</div></div>
+    </div>
+    <div style="text-align:center">
+      <a class="btn gold" href="https://wa.me/918210968182?text=Hi%20AMNI%20Creations%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Let's create</div>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="sub">For orders, custom designs or questions, contact AMNI Creations directly.</p>
+    </div>
+    <div class="contact-box">
+      <div class="contact-actions">
+        <a class="contact-link" href="mailto:malakarjackey@gmail.com">✉️ Email<br><span class="small">malakarjackey@gmail.com</span></a>
+        <a class="contact-link" href="tel:+918210968182">📞 Call<br><span class="small">8210968182</span></a>
+        <a class="contact-link" href="https://wa.me/918210968182" target="_blank" rel="noopener">💬 WhatsApp<br><span class="small">8210968182</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>© 2026 AMNI Creations</strong> • Handmade with heart.
+  <div class="small">Bookmarks • Greeting Cards • Keychains • Drawing &amp; Design</div>
+</footer>
+
+</body>
+</html>
